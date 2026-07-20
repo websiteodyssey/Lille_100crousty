@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>100% Crousti Lille | Poulet rôti et croustillant à Lille</title>
+<meta name="description" content="Découvrez 100% Crousti Original Lille, situé 3 rue des Sarrazins. Poulet rôti et croustillant, menus généreux, commande à emporter ou en livraison.">
+<meta name="keywords" content="100% crousti lille, poulet rôti lille, poulet croustillant lille, restauration rapide lille, sarrazins, wazemmes">
+<meta name="theme-color" content="#F68B1F">
+<!-- TODO : remplacer par l'URL définitive du site 100% Crousti Lille -->
+<link rel="canonical" href="https://lille.crousti.fr/">
+
+<!-- Open Graph -->
+<meta property="og:type" content="restaurant">
+<meta property="og:site_name" content="100% Crousti Lille">
+<meta property="og:title" content="100% Crousti Lille | Poulet rôti et croustillant à Lille">
+<meta property="og:description" content="100% Crousti Original Lille — 3 rue des Sarrazins. Poulet rôti et croustillant, menus généreux, à emporter ou en livraison.">
+<meta property="og:image" content="./assets/images/pic14.png">
+<!-- TODO : remplacer par l'URL définitive du site 100% Crousti Lille -->
+<meta property="og:url" content="https://lille.crousti.fr/">
+<meta property="og:locale" content="fr_FR">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="100% Crousti Lille | Poulet rôti et croustillant à Lille">
+<meta name="twitter:description" content="100% Crousti Original Lille — 3 rue des Sarrazins. À emporter ou en livraison.">
+<meta name="twitter:image" content="./assets/images/pic14.png">
+
+<link rel="preload" href="./assets/videos/hero.mp4" as="video" type="video/mp4">
+<link rel="icon" href="./assets/logo/logo.png">
+<link rel="apple-touch-icon" href="./assets/logo/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
+<link rel="stylesheet" href="./styles.css">
+
+<!-- Données structurées : uniquement les informations confirmées.
+     Pas d'openingHours ni d'aggregateRating tant qu'ils ne sont pas vérifiés sur la fiche Google officielle. -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Restaurant",
+  "name": "100% Crousti Original Lille",
+  "image": "./assets/images/pic14.png",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "3 rue des Sarrazins",
+    "postalCode": "59000",
+    "addressLocality": "Lille",
+    "addressCountry": "FR"
+  },
+  "geo": { "@type": "GeoCoordinates", "latitude": 50.6254, "longitude": 3.0491 },
+  "telephone": "+33320477524",
+  "servesCuisine": ["Poulet rôti", "Poulet croustillant", "Restauration rapide"],
+  "hasMap": "https://www.google.com/maps/search/?api=1&query=100%25%20Crousti%20Original%203%20rue%20des%20Sarrazins%2059000%20Lille",
+  "sameAs": [
+    "https://www.instagram.com/100croustioriginal/",
+    "https://www.tiktok.com/@100croustioriginal",
+    "https://www.facebook.com/p/100crousti-100077914936387/"
+  ]
+}
+</script>
+</head>
+<body>
+
+<a class="skip-link" href="#restaurant">Aller au contenu</a>
+
+<!-- ============================ HEADER ============================ -->
+<header class="site-header" id="siteHeader">
+  <div class="nav-inner">
+    <a class="brand" href="#accueil" aria-label="100% Crousti Lille — Accueil"><img src="./assets/logo/logo.png" alt="100% Crousti" width="120" height="40"></a>
+
+    <nav class="main-nav" id="mainNav" aria-label="Navigation principale">
+      <a href="#accueil" class="nav-mobile-only">Accueil</a>
+      <a href="#restaurant">Le restaurant</a>
+      <a href="#incontournables">Incontournables</a>
+      <a href="#galerie">Galerie</a>
+      <a href="#commande" class="nav-mobile-only">Commander</a>
+      <a href="#informations">Informations</a>
+      <a href="#acces">Accès</a>
+      <span class="main-nav-extra">
+        <a class="main-nav-cta" data-link="general">Découvrir 100% Crousti</a>
+        <a class="main-nav-cta" data-link="restaurants">Tous nos restaurants</a>
+      </span>
+    </nav>
+
+    <div class="nav-actions">
+      <a class="btn-discover" data-link="general">Nous découvrir</a>
+      <a class="btn-order-header" data-order-open href="#commande"><span aria-hidden="true">🍗</span> Commander</a>
+      <button class="nav-toggle" type="button" data-menu-toggle aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="mainNav">
+        <span class="nav-toggle-bars" aria-hidden="true"></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main>
+
+<!-- ============================ 1. HERO ============================ -->
+<section class="hero" id="accueil">
+  <div class="hero-bg" aria-hidden="true">
+    <video class="hero-video" autoplay muted loop playsinline preload="auto" fetchpriority="high" poster="./assets/videos/hero-poster.jpg">
+      <source src="./assets/videos/hero.mp4" type="video/mp4">
+    </video>
+    <div class="hero-overlay"></div>
+  </div>
+
+  <div class="container hero-grid">
+    <div class="hero-copy">
+      <span class="hero-badge-pill"><span class="badge-dot" aria-hidden="true"></span>100% Crousti Original — Lille</span>
+      <h1 class="hero-title">
+        <span class="ht-solid">LE POULET</span>
+        <span class="ht-outline">QUI FAIT</span>
+        <span class="ht-grad">CROUSTILLER LILLE</span>
+      </h1>
+      <p class="hero-lead">Retrouvez l'univers 100% Crousti au cœur de Lille : du poulet généreux, mariné, rôti et croustillant, disponible à emporter ou en livraison.</p>
+      <p class="hero-address">
+        <svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2a7 7 0 0 0-7 7c0 5 7 13 7 13s7-8 7-13a7 7 0 0 0-7-7Zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5Z"/></svg>
+        3 rue des Sarrazins, 59000 Lille
+      </p>
+      <div class="hero-services" aria-label="Services disponibles">
+        <span class="chip"><span aria-hidden="true">🥡</span> À emporter</span>
+        <span class="chip"><span aria-hidden="true">🛵</span> Livraison</span>
+        <span class="chip"><span aria-hidden="true">🍗</span> Poulet halal</span>
+      </div>
+      <div class="hero-cta">
+        <button class="btn btn-primary" type="button" data-order-open>Commander maintenant <span class="arr" aria-hidden="true">→</span></button>
+        <a class="btn btn-ghost" data-link="directions" target="_blank" rel="noopener"><span aria-hidden="true">📍</span> Obtenir l'itinéraire</a>
+      </div>
+    </div>
+
+    <!-- Mascotte : suit le curseur (script.js) -->
+    <button class="hero-mascot" id="heroMascot" type="button" aria-label="Change la pose de la mascotte 100% Crousti">
+      <img class="hero-mascot-badge" src="./assets/logo/tasty-badge.png" alt="100% Tasty Original — depuis 2008" width="116" height="116" loading="eager">
+      <div class="hero-mascot-glow" aria-hidden="true"></div>
+      <div class="hero-mascot-tilt" id="heroMascotTilt">
+        <div class="hero-mascot-react" id="heroMascotReact">
+          <div class="hero-mascot-float">
+            <img id="heroMascotImg" src="./assets/mascotte/pose-1.png" alt="Mascotte 100% Crousti" width="440" height="440" loading="eager">
+          </div>
+        </div>
+      </div>
+    </button>
+  </div>
+
+</section>
+
+<!-- ============================ 2. INFOS RAPIDES ============================ -->
+<section class="infobar-wrap" aria-label="Informations rapides">
+  <div class="container">
+    <div class="infobar">
+      <div class="info-card reveal">
+        <span class="info-ic" aria-hidden="true"><svg viewBox="0 0 24 24"><path fill="currentColor" d="M12 2a7 7 0 0 0-7 7c0 5 7 13 7 13s7-8 7-13a7 7 0 0 0-7-7Zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5Z"/></svg></span>
+        <div class="info-txt"><span class="info-k">À Lille</span><span class="info-v">3 rue des Sarrazins</span></div>
+      </div>
+      <div class="info-card reveal">
+        <span class="info-ic" aria-hidden="true"><svg viewBox="0 0 24 24"><path fill="currentColor" d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2Zm1 10.6 4 2.3-1 1.7-5-2.9V7h2Z"/></svg></span>
+        <!-- TODO : confirmer les horaires exacts avec 100% Crousti Lille -->
+        <div class="info-txt"><span class="info-k">Ouvert 7j/7</span><span class="info-v">11h00 – 23h00</span></div>
+      </div>
+      <div class="info-card reveal">
+        <span class="info-ic" aria-hidden="true"><svg viewBox="0 0 24 24"><path fill="currentColor" d="M6 2h12a1 1 0 0 1 1 1v18l-7-3-7 3V3a1 1 0 0 1 1-1Z"/></svg></span>
+        <div class="info-txt"><span class="info-k">À emporter</span><span class="info-v">Commandez &amp; récupérez</span></div>
+      </div>
+      <div class="info-card reveal">
+        <span class="info-ic" aria-hidden="true"><svg viewBox="0 0 24 24"><path fill="currentColor" d="M4 6h10v9H4zM15 9h3l3 3v3h-2a2 2 0 1 1-4 0h0V9ZM6.5 15a1.5 1.5 0 1 0 3 0 1.5 1.5 0 0 0-3 0Zm10 0a1.5 1.5 0 1 0 3 0 1.5 1.5 0 0 0-3 0Z"/></svg></span>
+        <div class="info-txt"><span class="info-k">Livraison</span><span class="info-v">Uber Eats &amp; Deliveroo</span></div>
+      </div>
+      <div class="info-card reveal">
+        <span class="info-ic" aria-hidden="true"><svg viewBox="0 0 24 24"><path fill="currentColor" d="M6.6 10.8a15 15 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.6 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1 11.4 11.4 0 0 0 .6 3.6 1 1 0 0 1-.25 1Z"/></svg></span>
+        <div class="info-txt"><span class="info-k">Téléphone</span><a class="info-v info-link" href="tel:+33320477524">03 20 47 75 24</a></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ 3. PRÉSENTATION ============================ -->
+<section class="section about" id="restaurant">
+  <div class="container about-grid">
+    <div class="about-media reveal reveal-right">
+      <img src="./assets/images/pic14.png" alt="Devanture 100% Crousti Original" width="1132" height="1415" loading="lazy" decoding="async" data-parallax="0.06">
+      <span class="about-tag">Rue des Sarrazins</span>
+    </div>
+    <div class="about-copy">
+      <div class="eyebrow">★ Le restaurant</div>
+      <h2 class="section-title">100% CROUSTI,<br><span class="accent">100% LILLE</span></h2>
+      <p class="about-text">Installé rue des Sarrazins à Lille, 100% Crousti Original propose une cuisine généreuse autour du poulet rôti et croustillant. Retrouvez les recettes emblématiques de l'enseigne, les menus gourmands et les accompagnements, à commander à emporter ou en livraison.</p>
+      <div class="highlights">
+        <div class="hl"><span class="hl-n">7j/7</span><span class="hl-t">Ouvert tous les jours</span></div>
+        <div class="hl"><span class="hl-n">2</span><span class="hl-t">Plateformes de livraison</span></div>
+        <div class="hl"><span class="hl-n">🍗</span><span class="hl-t">Poulet mariné &amp; rôti</span></div>
+      </div>
+      <div class="btn-row">
+        <button class="btn btn-primary" type="button" data-order-open>Commander</button>
+        <a class="btn btn-dark" href="#incontournables">Voir les incontournables</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ BANDEAU DÉFILANT ============================ -->
+<div class="marquee" aria-hidden="true">
+  <div class="marquee-track">
+    <span class="marquee-item">100% CROUSTI</span><span class="marquee-sep">🍗</span>
+    <span class="marquee-item">MARINÉ · RÔTI · CROUSTILLANT</span><span class="marquee-sep">🔥</span>
+    <span class="marquee-item">À EMPORTER</span><span class="marquee-sep">🌶️</span>
+    <span class="marquee-item">EN LIVRAISON</span><span class="marquee-sep">⚡</span>
+    <span class="marquee-item">AU CŒUR DE LILLE</span><span class="marquee-sep">😋</span>
+    <span class="marquee-item">100% CROUSTI</span><span class="marquee-sep">🍗</span>
+    <span class="marquee-item">MARINÉ · RÔTI · CROUSTILLANT</span><span class="marquee-sep">🔥</span>
+    <span class="marquee-item">À EMPORTER</span><span class="marquee-sep">🌶️</span>
+    <span class="marquee-item">EN LIVRAISON</span><span class="marquee-sep">⚡</span>
+    <span class="marquee-item">AU CŒUR DE LILLE</span><span class="marquee-sep">😋</span>
+  </div>
+</div>
+
+<!-- ============================ 4. NOS INCONTOURNABLES ============================ -->
+<section class="section products" id="incontournables">
+  <div class="container">
+    <div class="eyebrow">★ La carte</div>
+    <h2 class="section-title">LES INCONTOURNABLES <span class="accent">DE LILLE</span></h2>
+    <p class="lead">Nos classiques les plus demandés — à commander en un clic.</p>
+    <ul class="products-grid">
+      <li class="product reveal">
+        <div class="product-media"><img src="./assets/images/pic03.png" alt="Poulet rôti 100% Crousti servi avec du riz épicé" width="1418" height="1128" loading="lazy" decoding="async"></div>
+        <div class="product-body">
+          <h3 class="product-name">Poulet rôti</h3>
+          <p class="product-desc">Mariné puis rôti, doré et fondant. En demi ou entier, à partager ou pour soi.</p>
+          <button class="btn btn-primary btn-sm" type="button" data-order-open>Commander</button>
+        </div>
+      </li>
+      <li class="product reveal">
+        <div class="product-media"><img src="./assets/images/pic06.png" alt="Menu pilons de poulet grillés sur une planche" width="1418" height="1128" loading="lazy" decoding="async"></div>
+        <div class="product-body">
+          <h3 class="product-name">Menu pilons</h3>
+          <p class="product-desc">Des pilons généreux, marinés et grillés, servis avec accompagnement et boisson.</p>
+          <button class="btn btn-primary btn-sm" type="button" data-order-open>Commander</button>
+        </div>
+      </li>
+      <li class="product reveal">
+        <div class="product-media"><img src="./assets/images/pic08.png" alt="Menu ailes de poulet croustillantes et donuts de poulet" width="1132" height="1415" loading="lazy" decoding="async"></div>
+        <div class="product-body">
+          <h3 class="product-name">Menu ailes</h3>
+          <p class="product-desc">Ailes marinées, grillées et laquées, à déguster sans modération.</p>
+          <button class="btn btn-primary btn-sm" type="button" data-order-open>Commander</button>
+        </div>
+      </li>
+      <li class="product reveal">
+        <div class="product-media"><img src="./assets/images/pic10.png" alt="Tender de poulet croustillant trempé dans une sauce" width="1094" height="1461" loading="lazy" decoding="async"></div>
+        <div class="product-body">
+          <h3 class="product-name">Tenders croustillants</h3>
+          <p class="product-desc">Filets de poulet panés, ultra croustillants dehors, moelleux dedans.</p>
+          <button class="btn btn-primary btn-sm" type="button" data-order-open>Commander</button>
+        </div>
+      </li>
+      <li class="product reveal">
+        <div class="product-media"><img src="./assets/images/pic07.png" alt="Donuts de poulet croustillants et pièces de poulet rôti" width="1132" height="1415" loading="lazy" decoding="async"></div>
+        <div class="product-body">
+          <h3 class="product-name">Donut au poulet</h3>
+          <p class="product-desc">L'incontournable Crousti : panure dorée et cœur fondant au poulet.</p>
+          <button class="btn btn-primary btn-sm" type="button" data-order-open>Commander</button>
+        </div>
+      </li>
+      <li class="product reveal">
+        <div class="product-media"><img src="./assets/images/pic01.png" alt="Grand plateau familial : poulet, tenders, donuts, riz et sauces" width="1418" height="1128" loading="lazy" decoding="async"></div>
+        <div class="product-body">
+          <h3 class="product-name">Menu familial</h3>
+          <p class="product-desc">Le grand plateau à partager : poulet, accompagnements et sauces maison.</p>
+          <button class="btn btn-primary btn-sm" type="button" data-order-open>Commander</button>
+        </div>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============================ 5. CONCEPT & EXPÉRIENCE ============================ -->
+<section class="concept" data-parallax-bg="0.12">
+  <div class="concept-bg" aria-hidden="true"></div>
+  <div class="container concept-inner">
+    <div class="concept-tags" aria-hidden="true"><span>MARINÉ.</span><span>RÔTI.</span><span>CROUSTILLANT.</span></div>
+    <h2 class="concept-title reveal">UNE RECETTE GÉNÉREUSE,<br>À DÉGUSTER COMME VOUS L'AIMEZ.</h2>
+    <p class="concept-lead reveal">Du poulet mariné, une cuisson maîtrisée et des panures dorées. L'énergie et le goût 100% Crousti, désormais au cœur de Lille.</p>
+    <button class="btn btn-primary reveal" type="button" data-order-open>Je commande à Lille</button>
+  </div>
+</section>
+
+<!-- ============================ 6. GALERIE ============================ -->
+<section class="section gallery" id="galerie">
+  <div class="container">
+    <div class="eyebrow">★ En images</div>
+    <h2 class="section-title">L'UNIVERS <span class="accent">100% CROUSTI</span></h2>
+    <p class="lead">Un aperçu de l'ambiance et des produits de la marque. Cliquez sur une image pour l'agrandir.</p>
+
+    <div class="gallery-grid" id="gallery">
+      <figure class="gallery-item gallery-item--big reveal">
+        <button class="gallery-open" type="button" aria-label="Agrandir l'image : la devanture 100% Crousti">
+          <img src="./assets/images/pic14.png" alt="Devanture 100% Crousti Original" width="1132" height="1415" loading="lazy" decoding="async">
+        </button>
+        <figcaption>La devanture 100% Crousti</figcaption>
+      </figure>
+      <figure class="gallery-item reveal">
+        <button class="gallery-open" type="button" aria-label="Agrandir l'image : le comptoir et le menu">
+          <img src="./assets/images/resto-interieur.png" alt="Intérieur d'un restaurant 100% Crousti avec son menu" width="888" height="720" loading="lazy" decoding="async">
+        </button>
+        <figcaption>Le comptoir &amp; le menu</figcaption>
+      </figure>
+      <figure class="gallery-item reveal">
+        <button class="gallery-open" type="button" aria-label="Agrandir l'image : le mur signature">
+          <img src="./assets/images/interieur-rose.png" alt="Mur signature néon rose de l'univers 100% Crousti" width="744" height="905" loading="lazy" decoding="async">
+        </button>
+        <figcaption>Le mur signature</figcaption>
+      </figure>
+      <figure class="gallery-item reveal">
+        <button class="gallery-open" type="button" aria-label="Agrandir l'image : les plateaux gourmands">
+          <img src="./assets/images/pic15.png" alt="Plateaux gourmands : tenders, pommes de terre, pâtes et donut" width="1131" height="1414" loading="lazy" decoding="async">
+        </button>
+        <figcaption>Les plateaux gourmands</figcaption>
+      </figure>
+      <figure class="gallery-item gallery-item--wide reveal">
+        <button class="gallery-open" type="button" aria-label="Agrandir l'image : commande à emporter">
+          <img src="./assets/images/pic16.png" alt="Sac 100% Crousti à emporter dans la rue" width="1131" height="1414" loading="lazy" decoding="async">
+        </button>
+        <figcaption>Prêt à emporter</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ 7. COMMANDE & SERVICES ============================ -->
+<section class="section order" id="commande">
+  <div class="container">
+    <div class="eyebrow">★ Commander</div>
+    <h2 class="section-title">VOTRE CROUSTI, <span class="accent">COMME VOUS VOULEZ</span></h2>
+
+    <div class="order-grid">
+      <article class="order-card reveal">
+        <span class="order-ic" aria-hidden="true"><svg viewBox="0 0 24 24"><path fill="currentColor" d="M6 2h12a1 1 0 0 1 1 1v18l-7-3-7 3V3a1 1 0 0 1 1-1Zm2 5v2h8V7Zm0 4v2h8v-2Z"/></svg></span>
+        <h3>À emporter</h3>
+        <p>Commandez vos produits préférés et récupérez-les directement au restaurant de Lille.</p>
+        <div class="order-actions">
+          <a class="btn btn-dark btn-sm" href="tel:+33320477524">Appeler le restaurant</a>
+          <a class="btn btn-secondary btn-sm" data-link="directions" target="_blank" rel="noopener">Obtenir l'itinéraire</a>
+        </div>
+      </article>
+
+      <article class="order-card reveal">
+        <span class="order-ic" aria-hidden="true"><svg viewBox="0 0 24 24"><path fill="currentColor" d="M4 6h10v9H4zM15 9h3l3 3v3h-2a2 2 0 1 1-4 0h0V9ZM6.5 15a1.5 1.5 0 1 0 3 0 1.5 1.5 0 0 0-3 0Zm10 0a1.5 1.5 0 1 0 3 0 1.5 1.5 0 0 0-3 0Z"/></svg></span>
+        <h3>Livraison</h3>
+        <p>Faites-vous livrer votre commande grâce aux plateformes disponibles autour de Lille.</p>
+        <div class="order-actions" data-delivery-actions>
+          <a class="btn btn-primary btn-sm" data-link="uberEats" target="_blank" rel="noopener">Uber Eats</a>
+          <a class="btn btn-primary btn-sm" data-link="deliveroo" target="_blank" rel="noopener">Deliveroo</a>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ 8. AVIS GOOGLE ============================ -->
+<section class="section reviews" id="avis">
+  <div class="container">
+    <div class="eyebrow">★ Avis Google</div>
+    <h2 class="section-title">ILS ONT GOÛTÉ, <span class="accent">ILS ADORENT</span></h2>
+    <div class="reviews-top reveal">
+      <div class="reviews-score-box">
+        <span class="reviews-score">4,5</span>
+        <span class="reviews-stars" style="--pct:90%" role="img" aria-label="Note moyenne de 4,5 sur 5 sur Google">★★★★★</span>
+        <!-- Note issue de sources tierces (RestaurantGuru, annuaires) — à reconfirmer sur la fiche Google officielle -->
+        <span class="reviews-count">Note Google · Gambetta, Lille</span>
+      </div>
+      <a class="btn btn-primary" data-link="reviews" target="_blank" rel="noopener">Voir tous les avis sur Google</a>
+    </div>
+  </div>
+
+  <!-- Avis publics Google : extraits courts attribués (Clément, Léonie) + retours agrégés. Défilement automatique. -->
+  <div class="reviews-marquee" aria-label="Avis clients Google">
+    <div class="reviews-track">
+      <figure class="review-card">
+        <div class="review-stars" aria-hidden="true">★★★★★</div>
+        <blockquote>«&nbsp;Super volaille&nbsp;!&nbsp;»</blockquote>
+        <figcaption><span class="review-who">Clément&nbsp;C.</span><span class="review-src"><svg viewBox="0 0 24 24" aria-hidden="true" width="14" height="14"><path fill="currentColor" d="M12 2a10 10 0 1 0 10 10h-9v3h5a6 6 0 1 1-1.6-5.6L20 6.4A10 10 0 0 0 12 2Z"/></svg> Avis Google</span></figcaption>
+      </figure>
+      <figure class="review-card">
+        <div class="review-stars" aria-hidden="true">★★★★★</div>
+        <blockquote>«&nbsp;Life changing.&nbsp;»</blockquote>
+        <figcaption><span class="review-who">Léonie</span><span class="review-src"><svg viewBox="0 0 24 24" aria-hidden="true" width="14" height="14"><path fill="currentColor" d="M12 2a10 10 0 1 0 10 10h-9v3h5a6 6 0 1 1-1.6-5.6L20 6.4A10 10 0 0 0 12 2Z"/></svg> Avis Google</span></figcaption>
+      </figure>
+      <figure class="review-card review-card--theme">
+        <div class="review-stars" aria-hidden="true">★★★★★</div>
+        <blockquote>Accueil chaleureux &amp; service rapide.</blockquote>
+        <figcaption><span class="review-who">Retours clients</span><span class="review-src">Google</span></figcaption>
+      </figure>
+      <figure class="review-card review-card--theme">
+        <div class="review-stars" aria-hidden="true">★★★★★</div>
+        <blockquote>Poulet généreux, bon rapport qualité-prix.</blockquote>
+        <figcaption><span class="review-who">Retours clients</span><span class="review-src">Google</span></figcaption>
+      </figure>
+      <figure class="review-card review-card--theme">
+        <div class="review-stars" aria-hidden="true">★★★★★</div>
+        <blockquote>Riz, ailes, pilons &amp; tenders au top.</blockquote>
+        <figcaption><span class="review-who">Retours clients</span><span class="review-src">Google</span></figcaption>
+      </figure>
+      <!-- duplicata pour un défilement en boucle sans couture -->
+      <figure class="review-card" aria-hidden="true">
+        <div class="review-stars">★★★★★</div>
+        <blockquote>«&nbsp;Super volaille&nbsp;!&nbsp;»</blockquote>
+        <figcaption><span class="review-who">Clément&nbsp;C.</span><span class="review-src">Avis Google</span></figcaption>
+      </figure>
+      <figure class="review-card" aria-hidden="true">
+        <div class="review-stars">★★★★★</div>
+        <blockquote>«&nbsp;Life changing.&nbsp;»</blockquote>
+        <figcaption><span class="review-who">Léonie</span><span class="review-src">Avis Google</span></figcaption>
+      </figure>
+      <figure class="review-card review-card--theme" aria-hidden="true">
+        <div class="review-stars">★★★★★</div>
+        <blockquote>Accueil chaleureux &amp; service rapide.</blockquote>
+        <figcaption><span class="review-who">Retours clients</span><span class="review-src">Google</span></figcaption>
+      </figure>
+      <figure class="review-card review-card--theme" aria-hidden="true">
+        <div class="review-stars">★★★★★</div>
+        <blockquote>Poulet généreux, bon rapport qualité-prix.</blockquote>
+        <figcaption><span class="review-who">Retours clients</span><span class="review-src">Google</span></figcaption>
+      </figure>
+      <figure class="review-card review-card--theme" aria-hidden="true">
+        <div class="review-stars">★★★★★</div>
+        <blockquote>Riz, ailes, pilons &amp; tenders au top.</blockquote>
+        <figcaption><span class="review-who">Retours clients</span><span class="review-src">Google</span></figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ 9. INFORMATIONS PRATIQUES ============================ -->
+<section class="section infos" id="informations">
+  <div class="container">
+    <div class="eyebrow">★ Infos pratiques</div>
+    <h2 class="section-title">TOUT CE QU'IL <span class="accent">FAUT SAVOIR</span></h2>
+
+    <div class="infos-grid">
+      <div class="infos-block reveal">
+        <h3 class="infos-title">Horaires</h3>
+        <!-- TODO : confirmer les horaires exacts avec 100% Crousti Lille -->
+        <table class="hours" id="hours">
+          <caption class="sr-only">Horaires d'ouverture du restaurant 100% Crousti Lille</caption>
+          <tbody><!-- généré par script.js à partir de LILLE_OPENING_HOURS --></tbody>
+        </table>
+        <p class="hours-note" id="hoursNote"></p>
+      </div>
+
+      <div class="infos-block reveal">
+        <h3 class="infos-title">Coordonnées &amp; services</h3>
+        <ul class="contact-list">
+          <li><span class="contact-k">Restaurant</span><span class="contact-v">100% Crousti Original Lille</span></li>
+          <li><span class="contact-k">Adresse</span><span class="contact-v">3 rue des Sarrazins, 59000 Lille</span></li>
+          <li><span class="contact-k">Téléphone</span><a class="contact-v info-link" href="tel:+33320477524">03 20 47 75 24</a></li>
+          <li><span class="contact-k">Services</span><span class="contact-v">À emporter · Livraison</span></li>
+          <li><span class="contact-k">Livraison</span><span class="contact-v">Uber Eats · Deliveroo</span></li>
+        </ul>
+        <div class="btn-row">
+          <button class="btn btn-primary btn-sm" type="button" data-order-open>Commander</button>
+          <a class="btn btn-dark btn-sm" href="#acces">Voir l'accès</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ 10. CARTE & ACCÈS ============================ -->
+<section class="section access" id="acces">
+  <div class="container">
+    <div class="eyebrow">★ Nous trouver</div>
+    <h2 class="section-title">CARTE <span class="accent">&amp; ACCÈS</span></h2>
+
+    <div class="access-grid">
+      <div class="access-map" id="map" role="application" aria-label="Carte de localisation du restaurant 100% Crousti Original Lille"></div>
+      <aside class="access-panel reveal">
+        <h3 class="access-name">100% Crousti Original Lille</h3>
+        <p class="access-line"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2a7 7 0 0 0-7 7c0 5 7 13 7 13s7-8 7-13a7 7 0 0 0-7-7Zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5Z"/></svg> 3 rue des Sarrazins, 59000 Lille</p>
+        <p class="access-line"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M6.6 10.8a15 15 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.6 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1 11.4 11.4 0 0 0 .6 3.6 1 1 0 0 1-.25 1Z"/></svg> <a class="info-link" href="tel:+33320477524">03 20 47 75 24</a></p>
+        <div class="btn-row">
+          <a class="btn btn-primary" data-link="directions" target="_blank" rel="noopener">Obtenir l'itinéraire</a>
+          <button class="btn btn-dark" type="button" data-order-open>Commander</button>
+        </div>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ BANDE D'IMAGES DÉFILANTE ============================ -->
+<section class="strip" aria-label="L'univers 100% Crousti en images">
+  <div class="strip-row">
+    <div class="strip-track">
+      <img src="./assets/images/pic03.png" alt="Poulet rôti et riz" loading="lazy" decoding="async">
+      <img src="./assets/images/pic06.png" alt="Pilons grillés" loading="lazy" decoding="async">
+      <img src="./assets/images/pic08.png" alt="Ailes et donuts" loading="lazy" decoding="async">
+      <img src="./assets/images/pic15.png" alt="Plateaux gourmands" loading="lazy" decoding="async">
+      <img src="./assets/images/pic10.png" alt="Tender croustillant" loading="lazy" decoding="async">
+      <img src="./assets/images/pic07.png" alt="Donuts de poulet" loading="lazy" decoding="async">
+      <img src="./assets/images/pic03.png" alt="" aria-hidden="true" loading="lazy" decoding="async">
+      <img src="./assets/images/pic06.png" alt="" aria-hidden="true" loading="lazy" decoding="async">
+      <img src="./assets/images/pic08.png" alt="" aria-hidden="true" loading="lazy" decoding="async">
+      <img src="./assets/images/pic15.png" alt="" aria-hidden="true" loading="lazy" decoding="async">
+      <img src="./assets/images/pic10.png" alt="" aria-hidden="true" loading="lazy" decoding="async">
+      <img src="./assets/images/pic07.png" alt="" aria-hidden="true" loading="lazy" decoding="async">
+    </div>
+  </div>
+  <div class="strip-row">
+    <div class="strip-track strip-track--reverse">
+      <img src="./assets/images/pic01.png" alt="Plateau familial" loading="lazy" decoding="async">
+      <img src="./assets/images/pic11.png" alt="Poulet croustillant" loading="lazy" decoding="async">
+      <img src="./assets/images/pic16.png" alt="Commande à emporter" loading="lazy" decoding="async">
+      <img src="./assets/images/resto-interieur.png" alt="Comptoir 100% Crousti" loading="lazy" decoding="async">
+      <img src="./assets/images/interieur-rose.png" alt="Mur signature" loading="lazy" decoding="async">
+      <img src="./assets/images/pic14.png" alt="Devanture" loading="lazy" decoding="async">
+      <img src="./assets/images/pic01.png" alt="" aria-hidden="true" loading="lazy" decoding="async">
+      <img src="./assets/images/pic11.png" alt="" aria-hidden="true" loading="lazy" decoding="async">
+      <img src="./assets/images/pic16.png" alt="" aria-hidden="true" loading="lazy" decoding="async">
+      <img src="./assets/images/resto-interieur.png" alt="" aria-hidden="true" loading="lazy" decoding="async">
+      <img src="./assets/images/interieur-rose.png" alt="" aria-hidden="true" loading="lazy" decoding="async">
+      <img src="./assets/images/pic14.png" alt="" aria-hidden="true" loading="lazy" decoding="async">
+    </div>
+  </div>
+</section>
+
+<!-- ============================ 11. RÉSEAUX SOCIAUX ============================ -->
+<section class="section social">
+  <div class="container">
+    <div class="social-card reveal">
+      <div class="social-copy">
+        <div class="eyebrow">@100crousti</div>
+        <h2 class="section-title">RETROUVEZ TOUT L'UNIVERS <span class="accent">100% CROUSTI</span></h2>
+        <p class="lead">Nouveautés, coulisses et offres de la marque, à suivre sur les réseaux officiels.</p>
+      </div>
+      <div class="social-grid">
+        <a class="social-link social-link--ig" href="https://www.instagram.com/100croustioriginal/" target="_blank" rel="noopener">
+          <span class="social-svg"><svg viewBox="0 0 448 512" aria-hidden="true"><path fill="currentColor" d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/></svg></span>
+          <span class="social-meta"><strong>Instagram</strong><small>@100croustioriginal</small></span>
+        </a>
+        <a class="social-link social-link--tt" href="https://www.tiktok.com/@100croustioriginal" target="_blank" rel="noopener">
+          <span class="social-svg"><svg viewBox="0 0 448 512" aria-hidden="true"><path fill="currentColor" d="M448 209.9a210.1 210.1 0 0 1-122.8-39.3V349.4A162.6 162.6 0 1 1 185 188.3V278.2a74.6 74.6 0 1 0 52.2 71.2V0l88 0a121.2 121.2 0 0 0 1.9 22.2h0A122.2 122.2 0 0 0 381 102.4a121.4 121.4 0 0 0 67 20.1z"/></svg></span>
+          <span class="social-meta"><strong>TikTok</strong><small>@100croustioriginal</small></span>
+        </a>
+        <a class="social-link social-link--fb" href="https://www.facebook.com/p/100crousti-100077914936387/" target="_blank" rel="noopener">
+          <span class="social-svg"><svg viewBox="0 0 320 512" aria-hidden="true"><path fill="currentColor" d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z"/></svg></span>
+          <span class="social-meta"><strong>Facebook</strong><small>100% Crousti</small></span>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ============================ FOOTER ============================ -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-logos">
+      <img class="footer-badge" src="./assets/logo/tasty-badge.png" alt="100% Tasty Original — depuis 2008" width="120" height="120" loading="lazy">
+      <img class="footer-word" src="./assets/logo/tasty-word.png" alt="100% Tasty Original" width="220" height="80" loading="lazy">
+    </div>
+    <div class="footer-slogan">100% CROUSTI = 100% <span>HMMM</span></div>
+    <nav class="footer-links" aria-label="Liens de bas de page">
+      <a href="#accueil">Accueil</a>
+      <a href="#incontournables">Nos incontournables</a>
+      <a href="#commande">Commander</a>
+      <a href="#informations">Informations</a>
+      <a href="#acces">Accès</a>
+      <a data-link="general">Site général 100% Crousti</a>
+      <a data-link="restaurants">Tous nos restaurants</a>
+      <a href="#">Mentions légales</a>
+      <a href="#">Politique de confidentialité</a>
+    </nav>
+    <div class="footer-social">
+      <a href="https://www.instagram.com/100croustioriginal/" target="_blank" rel="noopener" aria-label="Instagram 100% Crousti">
+        <svg viewBox="0 0 448 512" aria-hidden="true"><path fill="currentColor" d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/></svg>
+      </a>
+      <a href="https://www.tiktok.com/@100croustioriginal" target="_blank" rel="noopener" aria-label="TikTok 100% Crousti">
+        <svg viewBox="0 0 448 512" aria-hidden="true"><path fill="currentColor" d="M448 209.9a210.1 210.1 0 0 1-122.8-39.3V349.4A162.6 162.6 0 1 1 185 188.3V278.2a74.6 74.6 0 1 0 52.2 71.2V0l88 0a121.2 121.2 0 0 0 1.9 22.2h0A122.2 122.2 0 0 0 381 102.4a121.4 121.4 0 0 0 67 20.1z"/></svg>
+      </a>
+      <a href="https://www.facebook.com/p/100crousti-100077914936387/" target="_blank" rel="noopener" aria-label="Facebook 100% Crousti">
+        <svg viewBox="0 0 320 512" aria-hidden="true"><path fill="currentColor" d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z"/></svg>
+      </a>
+    </div>
+    <div class="footer-cta">
+      <a class="btn btn-light btn-sm" data-link="general">Retour au site général</a>
+    </div>
+    <div class="footer-bottom">© <span id="year">2026</span> 100% Crousti. Tous droits réservés.</div>
+  </div>
+</footer>
+
+<!-- ============================ MODALE DE COMMANDE ============================ -->
+<div class="modal" id="orderModal" hidden>
+  <div class="modal-backdrop" data-modal-close></div>
+  <div class="modal-dialog" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <button class="modal-close" type="button" aria-label="Fermer la fenêtre de commande" data-modal-close>×</button>
+    <div class="modal-head">
+      <img src="./assets/logo/tasty-badge.png" alt="" width="64" height="64" class="modal-badge">
+      <h2 id="modalTitle" class="modal-title">Commander à Lille</h2>
+      <p class="modal-sub">3 rue des Sarrazins, 59000 Lille</p>
+    </div>
+    <div class="modal-choices" id="modalChoices">
+      <a class="order-choice" data-link="uberEats" target="_blank" rel="noopener">
+        <span class="order-choice-ic" aria-hidden="true">🛵</span>
+        <span class="order-choice-txt"><strong>Uber Eats</strong><small>Livraison à Lille</small></span>
+        <span class="order-choice-arr" aria-hidden="true">→</span>
+      </a>
+      <a class="order-choice" data-link="deliveroo" target="_blank" rel="noopener">
+        <span class="order-choice-ic" aria-hidden="true">🛵</span>
+        <span class="order-choice-txt"><strong>Deliveroo</strong><small>Livraison à Lille</small></span>
+        <span class="order-choice-arr" aria-hidden="true">→</span>
+      </a>
+      <a class="order-choice order-choice--alt" href="tel:+33320477524">
+        <span class="order-choice-ic" aria-hidden="true">📞</span>
+        <span class="order-choice-txt"><strong>Appeler le restaurant</strong><small>03 20 47 75 24 · à emporter</small></span>
+        <span class="order-choice-arr" aria-hidden="true">→</span>
+      </a>
+    </div>
+  </div>
+</div>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+<script src="./script.js" defer></script>
+</body>
+</html>
