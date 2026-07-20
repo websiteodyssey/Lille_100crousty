@@ -447,7 +447,7 @@ a:focus-visible, button:focus-visible, .btn:focus-visible,
 .strip-row { overflow: hidden; }
 .strip-track { display: flex; gap: 16px; width: max-content; animation: marqueeX 48s linear infinite; }
 .strip-track--reverse { animation-direction: reverse; animation-duration: 56s; }
-.strip-track img { height: clamp(130px, 18vw, 210px); width: auto; border-radius: 16px; object-fit: cover; box-shadow: 0 10px 22px rgba(0,0,0,.3); }
+.strip-track img { height: clamp(130px, 18vw, 210px); width: clamp(160px, 22vw, 250px); aspect-ratio: 5/4; border-radius: 16px; object-fit: cover; box-shadow: 0 10px 22px rgba(0,0,0,.3); flex: none; }
 @keyframes marqueeX { from { transform: translateX(0); } to { transform: translateX(-50%); } }
 
 /* ---------- 14. INFORMATIONS ---------- */
