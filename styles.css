@@ -791,3 +791,99 @@ a:focus-visible, button:focus-visible, .btn:focus-visible,
   .marquee-track, .reviews-track, .strip-track, .accent { animation: none !important; }
   .accent { background-position: 0 center; }
 }
+
+/* =====================================================================
+   12. APPLICATION MOBILE (repris de crousti saint-denis)
+   ===================================================================== */
+.app-section { background: var(--dark); color: #fff; overflow: hidden; padding-block: clamp(44px, 6vw, 84px); }
+/* eyebrow/titre imbriqués dans .app-card-copy : le centrage global
+   `.section > .container > …` ne les attrape pas, on centre ici */
+.app-section .eyebrow { color: var(--primary); text-align: center; }
+.app-section .section-title { color: #fff; text-align: center; }
+.app-section .lead { color: #e7d9d3; }
+.app-card { display: block; }
+/* Avantages : vague de pulsation (chaque puce s'illumine à tour de rôle) */
+.app-benefits { margin: 24px 0 28px; }
+.app-benefits-track {
+  list-style: none; padding: 0; margin: 0;
+  display: flex; flex-wrap: wrap; gap: 10px; justify-content: center;
+}
+.app-benefits-track li {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: rgba(255,255,255,.07); border: 1px solid rgba(255,255,255,.15);
+  padding: 9px 16px; border-radius: 999px;
+  font-family: var(--font-display); text-transform: uppercase; letter-spacing: .02em;
+  font-size: 15px; color: #fff; white-space: nowrap;
+  animation: benefitPulse 3.4s ease-in-out infinite;
+}
+.app-benefits-track li:nth-child(1) { animation-delay: 0s; }
+.app-benefits-track li:nth-child(2) { animation-delay: .35s; }
+.app-benefits-track li:nth-child(3) { animation-delay: .7s; }
+.app-benefits-track li:nth-child(4) { animation-delay: 1.05s; }
+@keyframes benefitPulse {
+  0%, 72%, 100% { transform: translateY(0) scale(1); background: rgba(255,255,255,.07); border-color: rgba(255,255,255,.15); box-shadow: none; }
+  16%           { transform: translateY(-6px) scale(1.06); background: rgba(246,139,31,.22); border-color: rgba(246,139,31,.7); box-shadow: 0 8px 22px rgba(246,139,31,.35); }
+}
+.app-benefit-ic { font-size: 18px; }
+.app-stores { display: flex; gap: 14px; flex-wrap: wrap; }
+.app-stores--center { justify-content: center; margin-top: clamp(26px, 4vw, 44px); }
+.store-badge {
+  display: inline-flex; align-items: center; gap: 11px;
+  background: #000; border: 1px solid rgba(255,255,255,.28);
+  border-radius: 12px; padding: 9px 16px; color: #fff;
+  transition: transform .2s ease, background .2s ease;
+}
+.store-badge:hover { transform: translateY(-3px); background: #141414; }
+.store-ic { width: 26px; height: 26px; flex: none; }
+.store-badge span { display: flex; flex-direction: column; line-height: 1.15; text-align: left; }
+.store-badge small { font-size: 11px; font-weight: 500; letter-spacing: .01em; opacity: .92; }
+.store-badge strong { font-family: var(--font-body); font-weight: 600; font-size: 19px; letter-spacing: .01em; }
+
+/* Captures app : rangée centrée, apparition une par une au scroll */
+.app-screens {
+  margin-top: clamp(26px, 4vw, 44px);
+  display: flex; justify-content: center; align-items: flex-end; flex-wrap: wrap;
+  gap: clamp(16px, 3vw, 48px);
+}
+.app-screens img {
+  height: clamp(230px, 28vw, 360px); width: auto;
+  filter: drop-shadow(0 20px 38px rgba(0,0,0,.5));
+}
+/* écran du milieu un peu surélevé/agrandi (effet vitrine) */
+.app-screens img:nth-child(2) { height: clamp(255px, 31vw, 400px); }
+
+/* Entrée dynamique décalée (pop + rotation), puis flottement */
+.app-screens img.reveal { opacity: 0; transition: none; }
+.app-screens img:nth-child(1).reveal.in-view { animation: appScreenIn .8s cubic-bezier(.2,1.25,.35,1) .05s both, appScreenFloat 5s ease-in-out 1.0s infinite; }
+.app-screens img:nth-child(2).reveal.in-view { animation: appScreenIn .8s cubic-bezier(.2,1.25,.35,1) .28s both, appScreenFloat 5.4s ease-in-out 1.3s infinite; }
+.app-screens img:nth-child(3).reveal.in-view { animation: appScreenIn .8s cubic-bezier(.2,1.25,.35,1) .51s both, appScreenFloat 5.8s ease-in-out 1.6s infinite; }
+@keyframes appScreenIn {
+  0%   { opacity: 0; transform: translateY(90px) scale(.82) rotate(-7deg); }
+  60%  { opacity: 1; transform: translateY(-12px) scale(1.04) rotate(3deg); }
+  100% { opacity: 1; transform: translateY(0) scale(1) rotate(0); }
+}
+@keyframes appScreenFloat {
+  0%, 100% { transform: translateY(0); }
+  50%      { transform: translateY(-14px); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .app-screens img, .app-benefits-track li { animation: none !important; }
+  .app-screens img.reveal { opacity: 1; }
+}
+
+@media (max-width: 560px) {
+  /* Avantages app : 2 par ligne sur mobile */
+  .app-benefits-track { gap: 8px; }
+  .app-benefits-track li {
+    flex: 1 1 calc(50% - 4px); min-width: 0; box-sizing: border-box;
+    justify-content: center; text-align: center;
+    white-space: normal; line-height: 1.15; font-size: 12.5px; padding: 9px 8px; gap: 6px;
+  }
+  /* Section app : un peu plus d'air sur mobile */
+  .app-section { padding-block: clamp(56px, 14vw, 84px); }
+  .app-benefits { margin: 20px 0 26px; }
+  .app-screens { margin-top: 30px; gap: 14px; }
+  .app-stores--center { margin-top: 30px; }
+  .app-stores { justify-content: center; }
+}
